@@ -17,6 +17,8 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         nav {
             margin: 20px 0;
@@ -51,11 +53,25 @@
         section h2 {
             color: #4CAF50;
         }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Alinha as imagens à esquerda */
+        }
+        figure {
+            margin: 10px;
+            text-align: center;
+            flex: 1 1 calc(25% - 20px); /* Ajusta a largura para 25% do contêiner */
+            max-width: calc(25% - 20px);
+        }
         img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: auto; /* Mantém a proporção */
+            max-height: 200px; /* Altura máxima */
+            object-fit: contain; /* Mantém a imagem dentro do espaço */
             border-radius: 5px;
             margin-top: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         footer {
             text-align: center;
@@ -63,7 +79,7 @@
             padding: 15px 0;
             background: #4CAF50;
             color: white;
-            position: relative;
+            border-radius: 8px;
         }
         ul.memories {
             list-style-type: disc;
@@ -87,29 +103,46 @@
 <main>
     <section id="fundamental">
         <h2>Ensino Fundamental</h2>
-        <h3>Novo Eden</h3>
+        <h3 style="font-weight: bold; font-size: 1.5em;">Novo Éden</h3>
         <p><strong>Data:</strong> 2012</p>
-        <ul class="memories">
-            <li>Estudei até o 6° ano com meu primo e conheci varios amigos.</li>
-            <li>Minha mãe me deixava na casa dos meus avós, onde eu e meu primo brincávamos muito.</li>
-            <li>Meu professor Fabiano nos mostrou vários filmes animados e músicas que influenciaram meu gosto musical Aprendi a tocar um instrumento.</li>
-        </ul>
-        <img src="WhatsApp Image 2024-10-17 at 18.59.20 (1).jpeg" alt="Eu e meu vô" width="400">
-        <img src="WhatsApp Image 2024-10-17 at 19.08.39.jpeg" alt="Eu e meu primo" width="250">
+        <div class="gallery">
+            <figure>
+                <img src="WhatsApp Image 2024-10-17 at 18.59.20 (1).jpeg" alt="Eu e meu vô">
+                <figcaption>Ao final da aula, minha mãe sempre me deixava na casa dos meus avós, onde eu e meu primo brincávamos.</figcaption>
+            </figure>
+            <figure>
+                <img src="WhatsApp Image 2024-10-17 at 19.08.39.jpeg" alt="Eu e meu primo">
+                <figcaption>Eu e meu primo.</figcaption>
+            </figure>
+            <figure>
+                <img src="F.jpeg" alt="Minha formatura">
+                <figcaption>Minha "formatura" do jardim de infância.</figcaption>
+            </figure>
+        </div>
     </section>
 
     <section id="medio">
         <h2>Ensino Médio</h2>
-        <h3>Padre Claudio Morelli</h3>
+        <h3 style="font-weight: bold; font-size: 1.5em;">Padre Claudio Morelli</h3>
         <p><strong>Data:</strong> 2017</p>
-        <ul class="memories">
-            <li>Conheci novos amigos e reencontrei outros.</li>
-            <li>Durante a pandemia, fiz um trabalho de interpretação, onde interpretei Sidney Segal.</li>
-            <li>Visitei uma caverna e o museu da Volvo em uma excursão pela escola.</li>
-            <li>Fiz vários jogos no 2° ano pelo Alura. O mais legal foi um jogo de ping pong</li>
-        </ul>
-        <img src="WhatsApp Image 2024-10-17 at 19.08.39 (1).jpeg" alt="Interpretação teatral" width="400">
-        <img src="s.jpg" alt="museu" width="400">
+        <div class="gallery">
+            <figure>
+                <img src="WhatsApp Image 2024-10-17 at 19.08.39 (1).jpeg" alt="Interpretação teatral">
+                <figcaption>Interpretação do Sidney Segal.</figcaption>
+            </figure>
+            <figure>
+                <img src="CAVERNA 2.jpeg" alt="Visita às cavernas parte 2">
+                <figcaption>Visita às cavernas.</figcaption>
+            </figure>
+            <figure>
+                <img src="s.jpg" alt="Museu da Volvo">
+                <figcaption>Visita ao museu da Volvo.</figcaption>
+            </figure>
+            <figure>
+                <img src="Furlan Sabonetes.jpeg" alt="Sabonetes do projeto">
+                <figcaption>Os sabonetes que tivemos que criar para apresentar no final do 2º ano.</figcaption>
+            </figure>
+        </div>
     </section>
 </main>
 
